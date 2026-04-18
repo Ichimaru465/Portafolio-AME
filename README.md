@@ -4,9 +4,9 @@
 
 **Estiven Alarcón Mendoza**
 
-### Curso: Desarrollo de Aplicaciones Web
-### Universidad Nacional del Centro del Perú
-### Periodo: 2026-I
+- Curso: Desarrollo de Aplicaciones Web
+- Universidad Nacional del Centro del Perú
+- Periodo: 2026-I
 
 ---
 
