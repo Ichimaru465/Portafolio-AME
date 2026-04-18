@@ -4,9 +4,9 @@
 
 **Estiven Alarcón Mendoza**
 
-Curso: Desarrollo de Aplicaciones Web
-Universidad Nacional del Centro del Perú
-Periodo: 2026-I
+### Curso: Desarrollo de Aplicaciones Web
+### Universidad Nacional del Centro del Perú
+### Periodo: 2026-I
 
 ---
 
@@ -115,7 +115,7 @@ Para visualizar el proyecto en local:
 1. Clonar el repositorio:
 
 ```
-git clone 
+git clone https://github.com/Ichimaru465/Portafolio-AME.git
 ```
 
 2. Abrir la carpeta en un editor de código
