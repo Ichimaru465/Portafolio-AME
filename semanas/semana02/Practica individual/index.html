@@ -1,0 +1,144 @@
+<!-- ================= PASO 1: ESTRUCTURA DEL PROYECTO ================= -->
+<!-- Archivo principal index.html dentro de la carpeta Semana02 -->
+<!DOCTYPE html>
+
+<!-- ================= PASO 2: HTML5 + SEO + CONFIGURACIÓN BASE ================= -->
+<html lang="es"> <!-- Define el idioma del documento -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite caracteres especiales -->
+    
+    <!-- Permite diseño responsivo en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!-- Mejora el posicionamiento en buscadores (SEO) -->
+    <meta name="description" content="CyberSecure Academy: Formación avanzada en hacking ético y defensa digital.">
+    
+    <!-- Título de la página -->
+    <title>CyberSecure Academy | Pro-Training</title>
+    
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= PASO 3: HEADER CON FLEXBOX ================= -->
+    <!-- Contiene el logo y menú de navegación -->
+    <header class="header">
+
+        <!-- Logo del sitio -->
+        <div class="logo">Cyber<span>Secure</span></div>
+
+        <!-- Menú de navegación con enlaces internos -->
+        <nav class="nav">
+            <!-- Navegación mediante anclas (#id) -->
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#cursos" class="nav-link">Cursos</a>
+            <a href="#certificacion" class="nav-link">Certificación</a>
+
+            <!-- Botón de acción (lleva al footer/contacto) -->
+            <a href="#contacto" class="btn-nav">Inscribirse</a>
+        </nav>
+    </header>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main>
+        
+        <!-- Sección principal (Hero) -->
+        <!-- Representa la portada de la página -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+
+                <!-- Etiqueta decorativa -->
+                <span class="badge">Nivel Avanzado</span>
+
+                <!-- Título principal -->
+                <h1>Protege el Futuro <br><span>Digital</span></h1>
+
+                <!-- Descripción del curso -->
+                <p>
+                    Domina el hacking ético y la protección de infraestructuras críticas 
+                    con metodología 100% práctica.
+                </p>
+                
+                <!-- Botones con navegación interna -->
+                <div class="hero-btns">
+                    <!-- Navega a la sección de cursos -->
+                    <a href="#cursos" class="btn-primary">Ver Módulos</a>
+
+                    <!-- Navega a certificación -->
+                    <a href="#certificacion" class="btn-secondary">Certificaciones</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PASO 4: GRID Y TARJETAS ================= -->
+        <!-- Sección que muestra los módulos usando CSS Grid -->
+        <section class="contenedor" id="cursos">
+            <h2 class="titulo">Especializaciones Disponibles</h2>
+            
+            <!-- Contenedor de tarjetas -->
+            <div class="grid">
+
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Introducción</h3>
+                    <p>Fundamentos de la ciberseguridad, criptografía y análisis de amenazas digitales.</p>
+                </article>
+
+                <!-- Tarjeta destacada -->
+                <article class="card featured">
+                    <div class="card-icon">💀</div>
+                    <h3>Hacking Ético</h3>
+                    <p>Pentesting avanzado, explotación de sistemas y auditoría de seguridad profesional.</p>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Seguridad en Redes</h3>
+                    <p>Configuración de firewalls, IDS/IPS y protección de tráfico en tiempo real.</p>
+                </article>
+
+                <!-- Tarjeta 4 -->
+                <article class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Vulnerabilidades</h3>
+                    <p>Análisis de fallos en aplicaciones web y mitigación de ataques OWASP Top 10.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección de certificación -->
+        <section class="contenedor section-alt" id="certificacion">
+            <div class="cert-box">
+                <h2>Certificación Internacional</h2>
+                <p>
+                    Al finalizar los módulos, obtendrás una acreditación oficial 
+                    avalada por la Facultad de Ingeniería de Sistemas - UNCP.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= PASO 5: DISEÑO RESPONSIVO ================= -->
+    <!-- El comportamiento responsivo se implementa en el archivo CSS con media queries -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contacto">
+        <p>&copy; 2026 - CyberSecure Academy | Ingeniería de Sistemas UNCP</p>
+
+        <!-- Nota de la práctica -->
+        <p>
+            <small>
+                Práctica Semana 02: HTML5, CSS3, Flexbox y Grid
+            </small>
+        </p>
+    </footer>
+
+</body>
+</html>
