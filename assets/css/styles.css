@@ -525,3 +525,122 @@ section h2 {
   .timeline-year { margin-bottom: 15px; }
   .timeline-content { margin-left: 0; margin-top: 10px; }
 }
+
+/* ==========================================================================
+   5. ESTILOS PARA CONTACTO.HTML
+   ========================================================================== */
+
+/* Caja del correo electrónico */
+.email-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.email-box svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.email-link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  background-color: var(--accent-transparent);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  word-break: break-all; /* Evita que el correo se desborde en pantallas pequeñas */
+}
+
+.email-link:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Caja y estructura del formulario */
+.form-box {
+  grid-column: span 2;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  background-color: #16161a; /* Fondo oscuro sutil */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al seleccionar un campo de texto */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-transparent);
+}
+
+/* Caja de enlaces sociales */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #16161a;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  background-color: var(--accent-transparent);
+  border-color: var(--accent-color);
+  color: var(--text-main);
+}
+
+.social-links a:hover svg {
+  stroke: var(--accent-color);
+}
+
+/* Responsive para Contacto */
+@media (max-width: 768px) {
+  .form-box {
+    grid-column: span 1 !important; /* El formulario baja a 1 columna */
+  }
+  .input-group {
+    flex-direction: column; /* Apila nombre y correo */
+  }
+}
