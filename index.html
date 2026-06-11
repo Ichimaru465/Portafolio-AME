@@ -10,11 +10,17 @@
 <body>
 
   <nav class="navbar">
-    <div class="logo">Estiven Alarcón Mendoza<span>.</span></div>
+    <div class="logo">
+      <span class="logo-mark">EA</span>
+      <span class="logo-text">Estiven Alarcón</span>
+    </div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contacto.html">Contact</a></li>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="cuaderno.html">Cuaderno</a></li>
     </ul>
   </nav>
 
@@ -31,23 +37,132 @@
         
         <div class="hero-text">
           <div class="badge-status">
-            <span class="dot-pulse"></span> Disponible para nuevos retos
+            <span class="dot-pulse"></span> Portafolio personal // Desarrollo web
           </div>
           <h1 class="hero-title">
-            Construyendo soluciones web <span class="highlight">seguras</span> y escalables.
+            Hola, soy <span class="highlight">Estiven Alarcón</span>
           </h1>
+          <h2 class="hero-kicker">Estudiante de Ingeniería de Sistemas</h2>
           <p class="hero-subtitle">
-            Soy Estiven Alarcón Mendoza, Ingeniero de Sistemas y desarrollador Full-Stack en Perú. Especializado en ecosistemas Laravel y React, con conocimientos en ciberseguridad.
+            Desarrollo soluciones web y sistemas de información con código limpio, arquitectura escalable y una mirada constante hacia la ciberseguridad, la automatización y la experiencia de usuario.
           </p>
           
           <div class="hero-actions">
-            <a href="#semanas" class="btn-primary">Ver evidencias</a>
-            <a href="contacto.html" class="btn-secondary">Hablemos</a>
+            <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn-secondary">Contactarme</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Resumen profesional">
+            <div>
+              <strong>Full-Stack</strong>
+              <span>Laravel + React</span>
+            </div>
+            <div>
+              <strong>Seguridad</strong>
+              <span>Interés en ciberseguridad</span>
+            </div>
+            <div>
+              <strong>Cuaderno</strong>
+              <span>Avance académico</span>
+            </div>
+          </div>
+
+          <div class="hero-socials" aria-label="Enlaces rápidos">
+            <a href="cuaderno.html" aria-label="Ver cuaderno">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </a>
+            <a href="#proyectos" aria-label="Ir a proyectos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </a>
+            <a href="#contacto" aria-label="Ir a contacto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            </a>
           </div>
         </div>
 
-        <div class="hero-terminal">
-          <div class="terminal-box">
+        <div class="hero-visual">
+          <div class="profile-terminal-card">
+            <div class="profile-shell">
+              <img src="assets/img/perfil3.jpg" alt="Foto de perfil de Estiven Alarcón" class="hero-profile-img">
+              <div>
+                <span class="profile-label">Disponible para proyectos</span>
+                <h3>Full-Stack Developer</h3>
+                <p>Ingeniería de Sistemas · Perú</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section-block">
+      <div class="section-header">
+        <h2>Sobre mí</h2>
+        <p>Una visión rápida de cómo trabajo, qué estoy fortaleciendo y qué puedo aportar en proyectos digitales.</p>
+      </div>
+
+      <div class="about-terminal-layout">
+        <div class="about-main-column">
+          <div class="about-summary-grid">
+            <article class="about-summary-card">
+              <span>01</span>
+              <h3>Desarrollo con propósito</h3>
+              <p>Construyo interfaces y sistemas orientados a resolver necesidades reales, cuidando estructura, mantenibilidad y claridad visual.</p>
+            </article>
+
+            <article class="about-summary-card">
+              <span>02</span>
+              <h3>Perfil técnico integral</h3>
+              <p>Combino frontend, backend y bases de seguridad para entregar soluciones completas desde la experiencia de usuario hasta la lógica del sistema.</p>
+            </article>
+
+            <article class="about-summary-card">
+              <span>03</span>
+              <h3>Aprendizaje constante</h3>
+              <p>Estoy fortaleciendo conocimientos en ciberseguridad, automatización e inteligencia artificial aplicada a entornos web.</p>
+            </article>
+          </div>
+
+          <div class="skills-section">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <h3>Frontend</h3>
+                <div class="tags">
+                  <span class="tag">html</span>
+                  <span class="tag">css</span>
+                  <span class="tag">react</span>
+                  <span class="tag">vite</span>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <h3>Backend</h3>
+                <div class="tags">
+                  <span class="tag">laravel</span>
+                  <span class="tag">php</span>
+                  <span class="tag">python</span>
+                  <span class="tag">api rest</span>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <h3>Ciberseguridad & Tools</h3>
+                <div class="tags">
+                  <span class="tag">Kali Linux</span>
+                  <span class="tag">Parrot</span>
+                  <span class="tag">Cisco Ethical Hacking</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <aside class="terminal-showcase" aria-label="Resumen en terminal">
+          <div class="terminal-box hero-console">
             <div class="terminal-header">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
@@ -65,93 +180,59 @@
                 <p class="output">Laravel • React • Python</p>
 
                 <p><span class="prompt">$</span> status</p>
-                <p class="success">✔ Sistemas activos</p>
-                <p class="warning">⚠ Ciberseguridad en progreso</p>
+                <p class="success">✓ Sistemas activos</p>
+                <p class="warning">△ Ciberseguridad en progreso</p>
 
                 <p><span class="prompt">$</span> <span class="cursor"></span></p>
               </div>
             </div>
           </div>
-        </div>
-
-      </div>
-   
-    <section id="semanas" class="section-block">
-      <div class="section-header">
-        <h2>Evidencias del Curso</h2>
-        <p>Progreso académico y desarrollo de módulos semanales.</p>
+        </aside>
       </div>
 
-      <div class="cards-grid">
+      <div id="experiencia" class="experience-section">
+        <h2>Experiencia & Proyectos</h2>
         
-        <a href="semanas/semana01/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 01</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-year">
+              <span class="year-badge">2026</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Detección temprana de ransomware</h3>
+              <span class="company">at Investigación Universitaria</span>
+              <p>En proceso de un plan de tesis enfocado en el uso de Inteligencia Artificial para la identificación proactiva de ransomware, fortaleciendo la seguridad en entornos web e infraestructuras locales.</p>
+            </div>
           </div>
-          <h3>Fundamentos Web</h3>
-          <p>Soluciones web, Tecnologías web, Funcionamiento de la web.</p>
-        </a>
 
-        <a href="semanas/semana02/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 02</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div class="timeline-item">
+            <div class="timeline-year">
+              <span class="year-badge">2025</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Desarrollo de Intranet Municipal</h3>
+              <span class="company">at Sector Público</span>
+              <p>Diseño e implementación de una intranet orientada a mejorar la eficiencia en la comunicación intersectorial, integrando marcos administrativos como TUPA, PEI y ROF.</p>
+            </div>
           </div>
-          <h3>Diseño de Interfaces (UI/UX)</h3>
-          <p>HTML5, XML, CSS3, Flexbox/Grid, Diseño Responsivo y SEO.</p>
-        </a>
 
-        <a href="semanas/semana03/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 03</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div class="timeline-item">
+            <div class="timeline-year">
+              <span class="year-badge">2025</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Apoyo en Actividades Tecnológicas</h3>
+              <span class="company">at OTI UNCP</span>
+              <p>Prácticas pre-profesionales en la Oficina de Tecnología de la Información. Soporte administrativo, diseño de interfaces para el centro de idiomas y mantenimiento de sistemas institucionales.</p>
+            </div>
           </div>
-          <h3>Bootstrap y Tailwind CSS</h3>
-          <p>Framework de diseño y utilidades de CSS para el desarrollo web moderno.</p>
-        </a>
 
-        <a href="semanas/semana04/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 04</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <h3>JavaScript y Typescript</h3>
-          <p>Lenguajes de programación para el desarrollo web dinámico.</p>
-        </a>
-
-        <a href="semanas/semana05/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 05</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <h3>Framework JS (React) - HTML5, CSS3, XML, SEO</h3>
-          <p>Desarrollo de aplicaciones web modernas con React.</p>
-          <p>Trabajo grupal sobre HTML5, CSS3, XML y SEO.</p>
-        </a>
-
-        <a href="semanas/semana06/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 06</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <h3>Framework JS: Eventos y Consumos de APIs</h3>
-          <p>Gestión de eventos y comunicación con servicios web.</p>
-        </a>
-
-        <a href="semanas/semana07/index.html" class="action-card">
-          <div class="card-top">
-            <span class="tag-week">Semana 07</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <h3>Framework JS: React Hooks</h3>
-          <p>Utilización de Hooks para gestionar el estado y el ciclo de vida en componentes funcionales.</p>
-        </a>
-
+        </div>
       </div>
     </section>
 
-    <section class="section-block">
+    <section id="proyectos" class="section-block">
       <div class="section-header">
         <h2>Proyectos Destacados</h2>
         <p>Trabajos recientes en desarrollo e investigación.</p>
@@ -180,6 +261,62 @@
               <span class="tag">Elementor</span>
               <span class="tag">UI/UX</span>
             </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contacto" class="section-block">
+      <div class="section-header">
+        <h2>Contacto</h2>
+        <p>Canales para iniciar una colaboración o conversar sobre código y ciberseguridad.</p>
+      </div>
+
+      <div class="bento-wrapper">
+        
+        <div class="bento-box hero-box">
+          <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 10px;">
+            Iniciemos un <span class="highlight">PROYECTO</span>.
+          </h1>
+          <p>Estoy disponible para nuevos proyectos de desarrollo web, consultas sobre arquitecturas de sistemas o simplemente para hablar de código y ciberseguridad.</p>
+        </div>
+
+        <div class="bento-box email-box hover-scale">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <h3>Email Directo</h3>
+          <a href="mailto:gremmy465@gmail.com" class="email-link">gremmy465@gmail.com</a>
+        </div>
+
+        <div class="bento-box form-box">
+          <h3>Transmisión de Mensaje</h3>
+          <form class="contact-form">
+            <div class="input-group">
+              <input type="text" placeholder="Tu Nombre o Alias" required>
+              <input type="email" placeholder="Tu Correo Electrónico" required>
+            </div>
+            <textarea placeholder="Contenido del mensaje..." rows="4" required></textarea>
+            
+            <button type="submit" class="btn-primary" style="border:none; cursor:pointer; width: 100%; font-family: var(--font-mono);">
+              > ./enviar_mensaje.sh
+            </button>
+          </form>
+        </div>
+
+        <div class="bento-box links-box">
+          <h3>Conexiones Seguras</h3>
+          <div class="social-links">
+            <a href="https://github.com/Ichimaru465" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub: Ichimaru465
+            </a>
+            <a href="https://www.linkedin.com/in/estiven-rodrigo-alarcon-mendoza-b1bb3b311" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn: Estiven Alarcón Mendoza
+            </a>
           </div>
         </div>
 

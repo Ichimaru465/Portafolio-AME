@@ -42,12 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
     '.hero-subtitle',
     '.badge-status',
     '.hero-actions a',
+    '.hero-stats div',
+    '.hero-socials a',
+    '.profile-terminal-card',
     '.terminal-box',
+    '.about-summary-card',
     '.action-card',
     '.project-card',
     '.skill-card',
     '.timeline-item',
-    '.hero-photo img'
+    '.hero-photo img',
+    '.bento-box'
   ];
 
   const elements = [];

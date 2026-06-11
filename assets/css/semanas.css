@@ -3,13 +3,15 @@
    ========================================================================== */
 
 :root {
-  --bg-color: #050505;
-  --card-bg: #111114;
-  --text-main: #f5f5f5;
-  --text-muted: #a3a3a3;
-  --border-color: #262626;
-  --accent-color: #8b5cf6; /* Violeta principal */
-  --accent-transparent: rgba(139, 92, 246, 0.15);
+  --bg-color: #03030a;
+  --card-bg: rgba(10, 13, 28, 0.88);
+  --text-main: #f8fbff;
+  --text-muted: #9aa7bd;
+  --border-color: rgba(0, 245, 255, 0.18);
+  --accent-color: #00f5ff;
+  --accent-secondary: #ff2bd6;
+  --accent-hover: #00c8ff;
+  --accent-transparent: rgba(0, 245, 255, 0.14);
   
   --font-main: 'Inter', sans-serif;
   --font-mono: 'Fira Code', monospace;
@@ -22,10 +24,45 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 43, 214, 0.16), transparent 30%),
+    radial-gradient(circle at 84% 12%, rgba(0, 245, 255, 0.16), transparent 28%),
+    linear-gradient(135deg, #020209 0%, #070619 42%, #03030a 100%);
   color: var(--text-main);
   font-family: var(--font-main);
   line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 43, 214, 0.07) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 78%);
+}
+
+body::after {
+  z-index: 999;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.2;
 }
 
 /* --- Navegación Superior --- */
@@ -37,6 +74,8 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+  animation: drop-in 700ms ease both;
 }
 
 .back-link {
@@ -54,16 +93,18 @@ body {
 .back-link:hover {
   color: var(--accent-color);
   transform: translateX(-5px);
+  text-shadow: 0 0 12px rgba(0, 245, 255, 0.35);
 }
 
 .week-badge {
-  background-color: var(--accent-transparent);
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.12), rgba(255, 43, 214, 0.1));
   color: var(--accent-color);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 18px rgba(0, 245, 255, 0.12);
 }
 
 /* --- Contenedor Principal --- */
@@ -76,6 +117,7 @@ body {
 /* --- Cabecera de la Semana --- */
 .week-header {
   margin-bottom: 50px;
+  animation: rise-in 780ms ease both;
 }
 
 .glitch-title {
@@ -83,7 +125,9 @@ body {
   font-weight: 800;
   letter-spacing: -1px;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--accent-color);
+  text-shadow: 2px 0 0 var(--accent-secondary), 0 0 26px rgba(0, 245, 255, 0.28);
+  animation: text-glitch 4s infinite steps(1);
 }
 
 .subtitle {
@@ -91,6 +135,7 @@ body {
   color: var(--text-muted);
   border-left: 3px solid var(--accent-color);
   padding-left: 15px;
+  box-shadow: -10px 0 22px -18px rgba(0, 245, 255, 0.8);
 }
 
 /* --- Grid de Contenido --- */
@@ -102,16 +147,38 @@ body {
 
 /* --- Tarjetas Estilo Bento --- */
 .content-card {
-  background-color: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(10, 13, 28, 0.94), rgba(6, 8, 19, 0.86)),
+    radial-gradient(circle at 100% 0, rgba(0, 245, 255, 0.1), transparent 34%);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 30px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: rise-in 800ms ease both;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 35%, rgba(0, 245, 255, 0.1), transparent 65%);
+  opacity: 0;
+  transform: translateX(-30%);
+  transition: opacity 0.3s ease, transform 0.6s ease;
 }
 
 .content-card:hover {
-  border-color: rgba(139, 92, 246, 0.5);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  border-color: rgba(0, 245, 255, 0.55);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.4), 0 0 28px rgba(0, 245, 255, 0.13);
+}
+
+.content-card:hover::before {
+  opacity: 1;
+  transform: translateX(30%);
 }
 
 .card-header {
@@ -127,6 +194,7 @@ body {
   width: 24px;
   height: 24px;
   color: var(--accent-color);
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.35));
 }
 
 .card-header h2 {
@@ -150,7 +218,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1f;
+  background-color: rgba(4, 7, 18, 0.9);
   border: 1px dashed var(--accent-color);
   padding: 20px;
   border-radius: 12px;
@@ -173,35 +241,55 @@ body {
 }
 
 .btn-download {
-  background-color: var(--accent-color);
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  color: #02030a;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-download:hover {
-  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(0, 245, 255, 0.24), 0 0 22px rgba(255, 43, 214, 0.16);
 }
 
 /* --- Estilos Específicos para la Reflexión --- */
 .terminal-quote {
-  background-color: #0d0d0f;
-  border: 1px solid #333;
+  background-color: rgba(4, 7, 18, 0.92);
+  border: 1px solid var(--border-color);
   padding: 15px 20px;
   border-radius: 8px;
   font-family: var(--font-mono);
   font-size: 0.9rem;
   margin-bottom: 20px;
   color: #d4d4d8;
+  box-shadow: inset 0 0 24px rgba(0, 245, 255, 0.06);
 }
 
 .terminal-quote .prompt {
   color: var(--accent-color);
   font-weight: bold;
+}
+
+@keyframes drop-in {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes text-glitch {
+  0%, 84%, 100% { transform: translate(0); filter: hue-rotate(0deg); }
+  85% { transform: translate(1px, -1px); filter: hue-rotate(55deg); }
+  87% { transform: translate(-2px, 1px); }
+  89% { transform: translate(2px, 0); }
+  91% { transform: translate(0); filter: hue-rotate(0deg); }
 }
 
 /* --- Responsive --- */
@@ -214,4 +302,15 @@ body {
   }
   .btn-download { width: 100%; text-align: center; }
   .navbar-week { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
