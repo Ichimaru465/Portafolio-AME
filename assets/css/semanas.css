@@ -168,6 +168,8 @@ body::after {
   opacity: 0;
   transform: translateX(-30%);
   transition: opacity 0.3s ease, transform 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .content-card:hover {
@@ -188,6 +190,8 @@ body::after {
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .card-header .icon {
@@ -202,6 +206,11 @@ body::after {
   font-weight: 600;
   color: #fff;
   margin: 0;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
 }
 
 .card-body p {
@@ -223,6 +232,8 @@ body::after {
   padding: 20px;
   border-radius: 12px;
   margin-top: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .file-info {
@@ -241,6 +252,9 @@ body::after {
 }
 
 .btn-download {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
   color: #02030a;
   text-decoration: none;
@@ -248,6 +262,8 @@ body::after {
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
+  cursor: pointer;
+  pointer-events: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

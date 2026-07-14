@@ -911,6 +911,7 @@ section h2 {
   opacity: 0;
   transform: translateX(-30%);
   transition: opacity 0.3s ease, transform 0.6s ease;
+  pointer-events: none;
 }
 
 .action-card:hover {
